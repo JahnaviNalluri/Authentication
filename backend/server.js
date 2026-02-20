@@ -19,12 +19,12 @@ mongoose
     console.error("MongoDB connection error:", err.message);
   });
 const cors = require("cors");
-const cors = require("cors");
 
 app.use(cors({
   origin: [
-    "https://authentication-blue-rho.vercel.app",
+  
     "https://authentication-b8vecw6ud-janus-projects-1ade5e1c.vercel.app"
+  
   ],
   credentials: true
 }));
