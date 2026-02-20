@@ -18,3 +18,9 @@ mongoose
   .catch((err) => {
     console.error("MongoDB connection error:", err.message);
   });
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://authentication-blue-rho.vercel.app",
+  credentials: true
+}));
