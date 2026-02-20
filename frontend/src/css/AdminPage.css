@@ -1,0 +1,153 @@
+/* AdminPage.css */
+
+/* Container for the admin page */
+.admin-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  position: sticky; /* keeps it at top when scrolling */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.admin-header h2 {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Logout button styling */
+.logout-button {
+  padding: 10px 18px;
+  background-color: #ff4d4f; /* red for logout */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logout-button:hover {
+  background-color: #d9363e; /* darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Table styling */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #555;
+}
+
+.admin-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* Role-based row highlighting */
+.admin-table tbody tr[data-role="admin"] {
+  background-color: #fff0f0;
+}
+
+.admin-table tbody tr[data-role="user"] {
+  background-color: #f0f8ff;
+}
+
+/* Action buttons */
+.view-button,
+.delete-button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+/* View button */
+.view-button {
+  background-color: #1890ff;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #1070d1;
+}
+
+/* Delete button */
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d9363e;
+}
+
+/* Error message styling */
+.error-text {
+  color: #ff4d4f;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 8px 10px;
+  }
+
+  .admin-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .view-button,
+  .delete-button,
+  .logout-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

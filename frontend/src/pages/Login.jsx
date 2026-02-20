@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { loginUser, registerUser } from "../services/authService";
 import {useNavigate} from "react-router-dom";
+import "../css/Login.css";
 function Login(){
     const navigate=useNavigate();
     const [isLogin,setIsLogin]=useState(true);
@@ -45,46 +46,46 @@ function Login(){
 };
 
 return(
-    <div style={{maxWidth:400,margin:"auto",padding:20}}>
+    <div className="login-container">
         <h2>{isLogin?"Login":"Register"}</h2>
         <form onSubmit={handleSubmit}>
-            {error && <p style={{color:"red",marginBottom:10}}>{error}</p>}
+            {error && <p className="login-error">{error}</p>}
         {!isLogin&&(
             <input 
             name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="FullName"
-            style={{display:"block",marginBottom:10,width:"100%"}}/>
-
+            className="login-input"
+            />
              )}
         <input 
         name="email" 
         value={formData.email}
         onChange={handleChange}
         placeholder="Email"
-        style={{ display: "block", marginBottom: 10, width: "100%" }}/>
-
+        className="login-input"
+        />
         <input 
         name="password"
         type="password"
         placeholder="Password"
         onChange={handleChange}
         value={formData.password}
-        style={{ display: "block", marginBottom: 10, width: "100%" }}/>
-        
+        className="login-input"
+       /> 
 
-        <button type="submit" style={{width:"100%"}}>{isLogin?"Login":"Register"}</button>
+        <button type="submit" className="login-button" >{isLogin?"Login":"Register"}</button>
 
     </form>
 
 
 
-    <p style={{marginTop:10,textAlign:"center"}}>
+    <p className="toggle-text">
         {isLogin?"Dont have an account?" :"Already have an account?"} {" "}
         <button onClick={()=>setIsLogin(!isLogin)} 
-        style={{border:"none",background:"none",color:"blue",cursor:"pointer"}}>
-            {isLogin?"Register":"Login"}
+       className="toggle-button">
+       {isLogin?"Register":"Login"}
         </button>
     </p>
     </div>

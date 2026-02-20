@@ -1,0 +1,68 @@
+.dashboard-container {
+    width:100%;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Make the whole viewport a flex container */
+body {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 100vh;           /* full viewport height */
+  margin: 0;               /* remove default body margin */
+  background-color: #eaeaea; /* optional background */
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dashboard-form-group {
+  margin-bottom: 15px;
+}
+
+.dashboard-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.update-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.update-button:hover {
+  background-color: #125ca1;
+}
