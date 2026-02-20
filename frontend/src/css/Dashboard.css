@@ -17,7 +17,132 @@ body {
 }
 .dashboard-header {
   display: flex;
+  just/* ===============================
+   Dashboard Page
+================================= */
+
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===============================
+   Header
+================================= */
+
+.dashboard-header {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header h2 {
+  font-size: 22px;
+  color: #111827;
+}
+
+/* ===============================
+   Logout Button
+================================= */
+
+.logout-button {
+  padding: 8px 16px;
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+}
+
+/* ===============================
+   Profile Form Card
+================================= */
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Form Group */
+.dashboard-form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Inputs */
+.dashboard-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.dashboard-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+}
+
+/* ===============================
+   Update Button
+================================= */
+
+.update-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.update-button:hover {
+  background-color: #2563eb;
+}
+
+/* ===============================
+   Success / Message
+================================= */
+
+.success-message {
+  margin-bottom: 20px;
+  color: #16a34a;
+  font-weight: 600;
+}ify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
